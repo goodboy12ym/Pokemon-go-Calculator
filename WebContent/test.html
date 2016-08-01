@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<div>
+<div ng-app="myApp" ng-init="name='ming'"> 
+<div>
+  <div  ng-controller="customersCtrl">
+<p>{{name}}</p>
+<ul>
+  <li ng-repeat="x in names">
+    {{ x.Name +', '+x.Stam+', '+x.Atk+','+x.Def}}
+  </li>
+</ul>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script  src="custom.js">
+
+</script>
+
+</body>
+</html>

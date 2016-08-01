@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Pokemon Go Calculator</title>
+		<meta name="description" content="Worthy a Bootstrap-based, Responsive HTML5 Template">
+		<meta name="author" content="htmlcoder.me">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="css/animations.css" rel="stylesheet">
+
+		<!-- Worthy core CSS file -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- Custom css --> 
+		<link href="css/custom.css" rel="stylesheet">
+		
+		<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+		
+	</head>
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+		<!-- header start -->
+		<!-- ================ --> 
+		<header class="header fixed clearfix navbar navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+
+						<!-- header-left start -->
+						<!-- ================ -->
+						<div class="header-left clearfix">
+
+							<!-- logo -->
+							<div class="logo smooth-scroll">
+								<img id="logo" src="images/logo.jpg" alt="Pokemon Go">
+							</div>
+
+							<!-- name-and-slogan -->
+							<div class="site-name-and-slogan smooth-scroll">
+								<div class="site-name"><a href="#banner">Pokemon Helper</a></div>
+								<div class="site-slogan">IV Calculator for Pokemon go </div>
+							</div>
+
+						</div>
+						<!-- header-left end -->
+
+					</div>
+					<div class="col-md-6">
+
+						<!-- header-right start -->
+						<!-- ================ -->
+						<div class="header-right clearfix">
+
+							<!-- main-navigation start -->
+							<!-- ================ -->
+							<div class="main-navigation animated">
+
+								<!-- navbar start -->
+								<!-- ================ -->
+								<nav class="navbar navbar-default" role="navigation">
+									<div class="container-fluid">
+
+										<!-- Toggle get grouped for better mobile display -->
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										</div>
+
+										<!-- Collect the nav links, forms, and other content for toggling -->
+										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+											<ul class="nav navbar-nav navbar-right">
+												<li class="active"><a href="#banner">Home</a></li>
+												<li><a href="#Calculator">IV Calculator</a></li>
+												<li><a href="#services">Services</a></li>
+												<li><a href="#contact">Contact</a></li>
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+								<!-- navbar end -->
+
+							</div>
+							<!-- main-navigation end -->
+
+						</div>
+						<!-- header-right end -->
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+
+		<!-- banner start -->
+		<!-- ================ -->
+		<div id="banner" class="banner">
+			<div class="banner-image"></div>
+			<div class="banner-caption">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+							<h1 class="text-center">Hi  <span>trainer</span>!</h1>
+							<p class="lead text-center">Pokemon Helper can help you to decide the IV value of your Pokemon and find out the prefection.</p>
+							<div class="text-center">
+							<a href="#Calculator">
+							<button type="button" class="btn btn-warning">Start Calculate!</button>
+						    </a>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- banner end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn" ng-app="myApp" ng-init="name='ming'" ng-controller="customersCtrl">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 id="Calculator" class="title text-center">IV <span>Calculator</span></h1>
+						<p class="lead text-center">Enter the Information of your pokemon and get the result!</p>
+						<div class="space"></div>
+						<div class="row">
+						
+						    <div class="col-md-12">
+						        <div class="col-md-2">
+						           <h3><span>Pokemon</span></h3>
+						           <input type="text" class="form-control"  placeholder="Eevee" ng-model="pokemon">
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>CP</span></h3>
+						           <input type="text" class="form-control"  placeholder="0" ng-model="cp">
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>HP</span></h3>
+						           <input type="text" class="form-control"  placeholder="0" ng-model="hp">
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>Dust</span></h3>
+						           <select  class="form-control" ng-model="dust">
+                                      <option > 200  </option>
+                                      <option> 400 </option>
+                                      <option> 600  </option>
+                                      <option> 800 </option>
+                                      <option> 1000  </option>
+                                      <option> 1300 </option>
+                                      <option> 1600  </option>
+                                      <option> 1900 </option>
+                                      <option> 2200  </option>
+                                      <option> 2500 </option>
+                                      <option> 3000  </option>
+                                      <option> 3500 </option>
+                                      <option> 4000  </option>
+                                      <option> 4500 </option>
+                                      <option> 5000  </option>
+                                      <option> 6000 </option>
+                                      <option> 7000  </option>
+                                      <option> 8000 </option>
+                                      <option> 9000 </option>
+                                      <option> 10000 </option>
+                                   </select>
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>Powered</span></h3>
+						           <select  class="form-control" ng-model="power">
+                                      <option> No  </option>
+                                      <option> Yes </option>
+                                   </select>
+						        </div>
+						        <div class="col-md-2">
+						           <h3>&nbsp;</h3>
+						           <button type="button" class="btn btn-primary" ng-click="calculate()">Calculate</button>
+						           
+						        </div>
+						        
+						    </div>
+						  
+							 <div class="col-md-12">
+							    <div class="col-md-2 col-md-offset-10">
+							    <button type="button" class="btn btn-primary" ng-click="saveresult()">Refine</button>
+							    </div>
+							
+							 </div>
+							 <div class="col-md-12">
+							   <div class="col-md-2" >
+						           <h3 ><span>Result</span></h3>
+						             <div>
+                                     <ul>
+                                    <li ng-repeat="r in result">
+                                     {{ r.calculation }}
+                                   </li>
+                                   </ul>
+                                </div>
+
+						       </div>
+							
+							   <div class="col-md-2">
+						           <h3><span>Level</span></h3>
+                                   <div>
+                                     <ul>
+                                    <li ng-repeat="r in result">
+                                     {{ r.level }}
+                                   </li>
+                                   </ul>
+                                </div>
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>Attack</span></h3>
+						           <div>
+                                     <ul>
+                                    <li ng-repeat="r in result">
+                                     {{ r.attack }}
+                                   </li>
+                                   </ul>
+                                </div>
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>Defence</span></h3>
+						            <div>
+                                     <ul>
+                                    <li ng-repeat="r in result">
+                                     {{ r.defense }}
+                                   </li>
+                                   </ul>
+                                </div>
+						          
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>Stamina</span></h3>
+						            <div>
+                                     <ul>
+                                    <li ng-repeat="r in result">
+                                     {{ r.stamina }}
+                                   </li>
+                                   </ul>
+                                </div>
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>Perfection</span></h3>
+						            <div>
+                                     <ul>
+                                    <li ng-repeat="r in result">
+                                     {{ r.prefection }}
+                                   </li>
+                                   </ul>
+                                </div> 
+						        </div>
+				    </div>
+				    
+				     <div class="col-md-12">
+							   <div class="col-md-2" >
+						           <h3 ><span>Remember</span></h3>
+						             <div>
+                                     <ul>
+                                    <li ng-repeat="r in savedata">
+                                     {{ r.calculation }}
+                                   </li>
+                                   </ul>
+                                </div>
+
+						       </div>
+							
+							   <div class="col-md-2">
+						           <h3><span>Level</span></h3>
+                                   <div>
+                                     <ul>
+                                    <li ng-repeat="r in savedata">
+                                     {{ r.level }}
+                                   </li>
+                                   </ul>
+                                </div>
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>Attack</span></h3>
+						           <div>
+                                     <ul>
+                                    <li ng-repeat="r in savedata">
+                                     {{ r.attack }}
+                                   </li>
+                                   </ul>
+                                </div>
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>Defence</span></h3>
+						            <div>
+                                     <ul>
+                                    <li ng-repeat="r in savedata">
+                                     {{ r.defense }}
+                                   </li>
+                                   </ul>
+                                </div>
+						          
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>Stamina</span></h3>
+						            <div>
+                                     <ul>
+                                    <li ng-repeat="r in savedata">
+                                     {{ r.stamina }}
+                                   </li>
+                                   </ul>
+                                </div>
+						        </div>
+						        <div class="col-md-2">
+						           <h3><span>Perfection</span></h3>
+						            <div>
+                                     <ul>
+                                    <li ng-repeat="r in savedata">
+                                     {{ r.prefection }}
+                                   </li>
+                                   </ul>
+                                </div> 
+						        </div>
+				    </div>
+				     
+				    
+				              
+				    <!--  
+				    <div>
+                         <p>{{name}}</p>
+                         <ul>
+                         <li ng-repeat="x in names | filter:pokemon">
+                         {{ x.Name +', '+x.Stam+', '+x.Atk+','+x.Def}}
+                         </li>
+                          </ul>
+
+                         </div>
+                         <div>
+                         <p>lv</p>
+                         <ul>
+                         <li ng-repeat="y in cps">
+                         {{ y.Level +', '+y.CPMuti+','+y.Dust}}
+                         </li>
+                          </ul>
+
+                         </div>
+                         //-->
+				    
+			    </div>
+		    </div>
+		</div>
+	</div>
+	</div>
+		
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section translucent-bg bg-image-1 blue">
+			<div class="container object-non-visible" data-animation-effect="fadeIn">
+				<h1 id="services"  class="text-center title">Explain</h1>
+				<div class="space"></div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p>Each type of Pokemon has a base set of attributes for Stamina, Attack and Defence. Each specific Pokemon is "born" with it's own IV (individual values), that further increase these stats by 0-15 extra points. You can not change the IV's, not all Pokemon are born equal.
+
+                        These IV's make small differences in the final power of a Pokemon. For example, the base attributes of a Charizard are 212, 182, 156. This would be the "worst" charizard available where all IV's are zero. With max IV's, a Charizard would have 227, 197, 171. Each of these Atk, Def and Stam values for Charizard are only 7-10% better.
+
+                       Nonetheless, if having the absolute best Pokemon is critical to you, this tool wll help you find the hidden IV values that your Pokemon has so you can decide to keep it or try for something better.
+
+                       This tool uses the two following formulas and the inputs you provide about your Pokemon to attempt to identify its IVs:
+
+                        HP = (Base Stam + Stam IV) * Lvl(CPScalar)
+
+                        CP = (Base Atk + Atk IV) * (Base Def + Def IV)^0.5 * (Base Stam + Stam IV)^0.5 * Lvl(CPScalar)^2 / 10
+
+                        Note that Pokemon have hidden levels and each level requires two "Power-Ups", this tool will display Level 4.5 if your Pokemon has had one Power-Up after level 4.
+
+                       Major credit to u/__isitin__ for digging up the data.</p>
+					
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		
+		
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="plugins/modernizr.js"></script>
+
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+		
+		<!-- Backstretch javascript -->
+		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="js/template.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/custom.js"></script>
+       
+       
+	</body>
+</html>
